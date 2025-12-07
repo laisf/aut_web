@@ -12,7 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -25,7 +24,7 @@ jobs:
         run: npx cypress run
 
       - name: Save Cypress reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cypress-reports
           path: cypress/reports/html
